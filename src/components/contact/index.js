@@ -36,35 +36,35 @@ const Contact = () => {
 
                     <div className="contact__info">
                         <div className="contact__card">
-                            <box-icon name='envelope' className="contact__card-icon" />
+                            <box-icon name='envelope' class="contact__card-icon" />
                             <h3 className="contact__card-title">Email</h3>
                             <span className="contact__card-data">gracecancho@gmail.com</span>
 
                             <a href="mailto:gracecancho@gmail.com?subject=from_portfolio_web" className="contact__button">
                                 Write me
-                                <box-icon name='right-arrow-alt' className='contact__button-icon'></box-icon>
+                                <box-icon name='right-arrow-alt' class='contact__button-icon'></box-icon>
                             </a>
                         </div>
                         <div className="contact__card">
-                            <box-icon name='whatsapp' type='logo' className="contact__card-icon" />
+                            <box-icon name='whatsapp' type='logo' class="contact__card-icon" />
                             <h3 className="contact__card-title">Whatsapp</h3>
                             <span className="contact__card-data">kimnuebie</span>
 
                             <a href="https://api.whatsapp.com/send?phone=62214408789&text=Hello, more information!" className="contact__button">
                                 Write me
                                 {/* <i className="bx bx-right-arrow-alt contact__button-icon"></i> */}
-                                <box-icon name='right-arrow-alt' className='contact__button-icon' />
+                                <box-icon name='right-arrow-alt' class='contact__button-icon' />
                             </a>
                         </div>
                         <div className="contact__card">
-                            <box-icon type='logo' name='instagram' className='contact__card-icon' />
+                            <box-icon type='logo' name='instagram' class='contact__card-icon' />
                             <h3 className="contact__card-title">Messenger</h3>
                             <span className="contact__card-data">kimyoujin</span>
 
                             <a href="https://m.me/crypticalcoder" className="contact__button">
                                 Write me
                                 {/* <i className="bx bx-right-arrow-alt contact__button-icon"></i> */}
-                                <box-icon name='right-arrow-alt' className='contact__button-icon' />
+                                <box-icon name='right-arrow-alt' class='contact__button-icon' />
                             </a>
                         </div>
                     </div>
