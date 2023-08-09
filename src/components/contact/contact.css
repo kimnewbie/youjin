@@ -1,5 +1,6 @@
 .contact__container {
     grid-template-columns: repeat(2, max-content);
+    justify-content: center;
 }
 
 .contact__title {
@@ -102,6 +103,10 @@
 
 .contact__form-area textarea {
     resize: none;
+}
+
+.contact__send {
+    align-self: center;
 }
 
 /*=============== BREAKPOINTS ===============*/

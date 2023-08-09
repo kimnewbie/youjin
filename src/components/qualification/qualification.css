@@ -49,6 +49,13 @@
     column-gap: 1.5rem;
 }
 
+/* add */
+.qualification__left {
+    display: flex;
+    flex-direction: column;
+    justify-self: right;
+}
+
 .qualification__title {
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
@@ -62,6 +69,8 @@
 
 .qualification__calendar {
     font-size: var(--small-font-size);
+    display: flex;
+    gap: 5px;
 }
 
 .qualification__rounder {

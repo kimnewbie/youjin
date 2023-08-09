@@ -20,7 +20,7 @@ const About = () => {
             I have years of experience and many clients are happy with the
             projects carried out.
           </p>
-          <a download="" href={CV} className="button button--flex">
+          {/* <a download="" href={CV} className="button button--flex">
             Download CV
             <svg
               class="button__icon"
@@ -47,7 +47,7 @@ const About = () => {
                 fill="var(--container-color)"
               ></path>
             </svg>
-          </a>
+          </a> */}
         </div>
       </div>
     </section>

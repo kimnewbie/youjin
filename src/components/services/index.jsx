@@ -21,9 +21,9 @@ const Services = () => {
       <div className="services__container container grid">
         <div className="services__content">
           <div>
-            <i className="uil uil-web-grid services__icon"></i>
+            <i className="uil uil-arrow services__icon"></i>
             <h3 className="services__title">
-              Product <br /> Designer
+              Ui/Ux <br /> Designer
             </h3>
           </div>
           <span className="services__button" onClick={() => onClickToggle(1)}>
@@ -40,16 +40,17 @@ const Services = () => {
                 className="uil uil-times services__modal-close"
                 onClick={onClickCloseModal}
               ></i>
-              <h3 className="services__modal-title">Product Designer</h3>
+              <h3 className="services__modal-title">Ui/Ux Designer</h3>
               <p className="services__modal-description">
-                Service with more than a year of experience. Providing quality
-                work to clients and companies
+                With over a year of immersive experience in the world of UI/UX
+                design, I am committed to bringing forth innovative and
+                user-centered design solutions for clients and companies.
               </p>
               <ul className="services__modal-services grid">
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    I develop the user interface.
+                    Crafting Immersive User Experiences
                   </p>
                 </li>
                 <li className="services__modal-service">
@@ -59,20 +60,24 @@ const Services = () => {
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    I create ux element interactions.
+                    Transforming Concepts into Web Realities
                   </p>
                 </li>
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    I position your company brand.
+                    Interactive Element Architect
                   </p>
                 </li>
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    Design and mockups of products for companies.
+                    Visualizing the Future through Mockups
                   </p>
+                </li>
+                <li className="services__modal-service">
+                  <i className="uil uil-check-circle services__modal-icon"></i>
+                  <p className="services__modal-info">Collaboration is Key</p>
                 </li>
               </ul>
             </div>
@@ -80,9 +85,9 @@ const Services = () => {
         </div>
         <div className="services__content">
           <div>
-            <i className="uil uil-arrow services__icon"></i>
+            <i className="uil uil-edit services__icon"></i>
             <h3 className="services__title">
-              Ui/Ux <br /> Designer
+              ReactJS <br /> Developer
             </h3>
           </div>
           <span className="services__button" onClick={() => onClickToggle(2)}>
@@ -99,75 +104,17 @@ const Services = () => {
                 className="uil uil-times services__modal-close"
                 onClick={onClickCloseModal}
               ></i>
-              <h3 className="services__modal-title">Ui/Ux Designer</h3>
-              <p className="services__modal-description">
-                Service with more than a year of experience. Providing quality
-                work to clients and companies
-              </p>
-              <ul className="services__modal-services grid">
-                <li className="services__modal-service">
-                  <i className="uil uil-check-circle services__modal-icon"></i>
-                  <p className="services__modal-info">
-                    I develop the user interface.
-                  </p>
-                </li>
-                <li className="services__modal-service">
-                  <i className="uil uil-check-circle services__modal-icon"></i>
-                  <p className="services__modal-info">Web page development.</p>
-                </li>
-                <li className="services__modal-service">
-                  <i className="uil uil-check-circle services__modal-icon"></i>
-                  <p className="services__modal-info">
-                    I create ux element interactions.
-                  </p>
-                </li>
-                <li className="services__modal-service">
-                  <i className="uil uil-check-circle services__modal-icon"></i>
-                  <p className="services__modal-info">
-                    I position your company brand.
-                  </p>
-                </li>
-                <li className="services__modal-service">
-                  <i className="uil uil-check-circle services__modal-icon"></i>
-                  <p className="services__modal-info">
-                    Design and mockups of products for companies.
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="services__content">
-          <div>
-            <i className="uil uil-edit services__icon"></i>
-            <h3 className="services__title">
-              Visual <br /> Designer
-            </h3>
-          </div>
-          <span className="services__button" onClick={() => onClickToggle(3)}>
-            View More
-            <i className="uil uil-arrow-right services__button-icon"></i>
-          </span>
-          <div
-            className={`services__modal ${
-              toggleState === 3 ? "active-modal" : ""
-            }`}
-          >
-            <div className="services__modal-content">
-              <i
-                className="uil uil-times services__modal-close"
-                onClick={onClickCloseModal}
-              ></i>
               <h3 className="services__modal-title">Visual Designer</h3>
               <p className="services__modal-description">
-                Service with more than a year of experience. Providing quality
-                work to clients and companies
+                With a solid year of hands-on experience in ReactJS development,
+                I am committed to delivering high-quality web solutions for
+                clients and companies.
               </p>
               <ul className="services__modal-services grid">
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    I develop the user interface.
+                    Crafting Dynamic User Interfaces
                   </p>
                 </li>
                 <li className="services__modal-service">
@@ -177,19 +124,31 @@ const Services = () => {
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    I create ux element interactions.
+                    Transforming Designs into Interactive Websites
                   </p>
                 </li>
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    I position your company brand.
+                    Enhancing User Experience with Interactivity
                   </p>
                 </li>
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    Design and mockups of products for companies.
+                    Bringing Your Brand to the Digital Realm
+                  </p>
+                </li>
+                <li className="services__modal-service">
+                  <i className="uil uil-check-circle services__modal-icon"></i>
+                  <p className="services__modal-info">
+                    Prototyping Ideas for Rapid Development
+                  </p>
+                </li>
+                <li className="services__modal-service">
+                  <i className="uil uil-check-circle services__modal-icon"></i>
+                  <p className="services__modal-info">
+                    A Collaborative Approach to Success
                   </p>
                 </li>
               </ul>

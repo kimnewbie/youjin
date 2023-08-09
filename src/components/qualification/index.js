@@ -31,7 +31,7 @@ const Qualification = () => {
             <div class="qualification__sections">
                 <div class={`qualification__content ${toggleState === 1 ? "qualification__content-active" : ""}`}>
                     <div class="qualification__data">
-                        <div>
+                        <div className='qualification__left'>
                             <h3 class="qualification__title">Dreago</h3>
                             <span class="qualification__subtitle">Atman Partners &<br /> SK C&C</span>
                             <div class="qualification__calendar">
@@ -62,7 +62,7 @@ const Qualification = () => {
                         </div>
                     </div>
                     <div class="qualification__data">
-                        <div>
+                        <div className='qualification__left'>
                             <h3 class="qualification__title">DWP</h3>
                             <span class="qualification__subtitle">SK-Hynix</span>
                             <div class="qualification__calendar">
@@ -78,16 +78,16 @@ const Qualification = () => {
                 </div>
                 <div class={`qualification__content ${toggleState === 2 ? "qualification__content-active" : ""}`}>
                     <div class="qualification__data">
-                        <div>
-                            <h3 class="qualification__title">Java</h3>
-                            <span class="qualification__subtitle">Green Academy</span>
-                            <div class="qualification__calendar">
-                                <i class="uil uil-calendar-alt"></i>
+                        <div className='qualification__left'>
+                            <h3 className="qualification__title">Java</h3>
+                            <span className="qualification__subtitle">Green Academy</span>
+                            <div className="qualification__calendar">
+                                <i className="uil uil-calendar-alt"></i>
                                 2020 - 2021
                             </div>
                         </div>
                         <div>
-                            <span class="qualification__rounder"></span>
+                            <span className="qualification__rounder"></span>
                             <span class="qualification__line"></span>
                         </div>
                     </div>
@@ -107,7 +107,7 @@ const Qualification = () => {
                         </div>
                     </div>
                     <div class="qualification__data">
-                        <div>
+                        <div className='qualification__left'>
                             <h3 class="qualification__title">Silver Industry &<br />Social Welfare</h3>
                             <span class="qualification__subtitle">University of Gangnam</span>
                             <div class="qualification__calendar">
@@ -122,7 +122,7 @@ const Qualification = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     )
 }
 

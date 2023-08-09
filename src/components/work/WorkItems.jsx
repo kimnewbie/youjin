@@ -5,7 +5,7 @@ const WorkItems = ({ item }) => {
     <div className="work__card" key={item.id}>
       <img src={item.image} alt="" className="work__img" />
       <h3 className="work__title">{item.title}</h3>
-      <a href="#" className="work__button">
+      <a href={() => false} className="work__button">
         Demo
         <box-icon name="right-arrow-alt" class="work__button-icon" />
       </a>

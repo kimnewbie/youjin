@@ -24,8 +24,8 @@ const Footer = () => {
           </li>
         </ul>
         <div className="footer__social">
-          <a
-            href="https://instagram.com/newgeniee"
+          {/* <a
+            href="https://instagram.com/kimyoujin"
             className="footer__social-link"
             target="_blank"
             rel="noreferrer"
@@ -36,7 +36,7 @@ const Footer = () => {
               color="#fff"
               size="1.125rem"
             />
-          </a>
+          </a> */}
           <a
             href="https://github.com/kimnewbie"
             className="footer__social-link"
