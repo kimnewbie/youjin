@@ -106,7 +106,8 @@
 }
 
 .contact__send {
-    align-self: center;
+    display: flex;
+    place-content: end;
 }
 
 /*=============== BREAKPOINTS ===============*/
