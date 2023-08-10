@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./header.css";
 
 const Header = () => {
@@ -113,6 +114,18 @@ const Header = () => {
               >
                 <i className="uil uil-message nav__icon"></i>
                 Contact
+              </a>
+            </li>
+            <li className="nav__item">
+              <a
+                href="/signup"
+                // onClick={() => onClickTabs("#signup")}
+                // className={`nav__link ${
+                //   activeNav === "#signup" ? "active-link" : ""
+                // }`}
+              >
+                <i className="uil uil-message nav__icon"></i>
+                Sign Up
               </a>
             </li>
           </ul>
