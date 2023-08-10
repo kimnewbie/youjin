@@ -9,75 +9,72 @@ const Qualification = () => {
         setToggleState(index);
     };
 
-    const onClickCloseModal = () => {
-        setToggleState(0);
-    };
     return (
         <section className="qualification section" id='qualification'>
-            <h2 class="section__title">Qualification</h2>
-            <span class="section__subtitle">My personal journey</span>
+            <h2 className="section__title">Qualification</h2>
+            <span className="section__subtitle">My personal journey</span>
 
-            <div class="qualification__container container">
-                <div class="qualification__tabs">
-                    <div class={`qualification__button ${toggleState === 1 ? "qualification__active" : ""} button--flex`} onClick={() => onClickToggle(1)}>
-                        <i class="uil uil-briefcase qualification__icon">Experience</i>
+            <div className="qualification__container container">
+                <div className="qualification__tabs">
+                    <div className={`qualification__button ${toggleState === 1 ? "qualification__active" : ""} button--flex`} onClick={() => onClickToggle(1)}>
+                        <i className="uil uil-briefcase qualification__icon">Experience</i>
                     </div>
-                    <div class={`qualification__button ${toggleState === 2 ? "qualification__active" : ""} button--flex`} onClick={() => onClickToggle(2)}>
-                        <i class="uil uil-graduation-cap qualification__icon">Education</i>
+                    <div className={`qualification__button ${toggleState === 2 ? "qualification__active" : ""} button--flex`} onClick={() => onClickToggle(2)}>
+                        <i className="uil uil-graduation-cap qualification__icon">Education</i>
                     </div>
                 </div>
             </div>
 
-            <div class="qualification__sections">
-                <div class={`qualification__content ${toggleState === 1 ? "qualification__content-active" : ""}`}>
-                    <div class="qualification__data">
+            <div className="qualification__sections">
+                <div className={`qualification__content ${toggleState === 1 ? "qualification__content-active" : ""}`}>
+                    <div className="qualification__data">
                         <div className='qualification__left'>
-                            <h3 class="qualification__title">Dreago</h3>
-                            <span class="qualification__subtitle">Atman Partners &<br /> SK C&C</span>
-                            <div class="qualification__calendar">
-                                <i class="uil uil-calendar-alt"></i>
+                            <h3 className="qualification__title">Dreago</h3>
+                            <span className="qualification__subtitle">Atman Partners &<br /> SK C&C</span>
+                            <div className="qualification__calendar">
+                                <i className="uil uil-calendar-alt"></i>
                                 2022 - Present
                             </div>
                         </div>
                         <div>
-                            <span class="qualification__rounder"></span>
-                            <span class="qualification__line"></span>
+                            <span className="qualification__rounder"></span>
+                            <span className="qualification__line"></span>
                         </div>
                     </div>
-                    <div class="qualification__data">
+                    <div className="qualification__data">
                         <div></div>
 
                         <div>
-                            <span class="qualification__rounder"></span>
-                            <span class="qualification__line"></span>
+                            <span className="qualification__rounder"></span>
+                            <span className="qualification__line"></span>
                         </div>
 
                         <div>
-                            <h3 class="qualification__title">myRPA</h3>
-                            <span class="qualification__subtitle">SKC</span>
-                            <div class="qualification__calendar">
-                                <i class="uil uil-calendar-alt"></i>
+                            <h3 className="qualification__title">myRPA</h3>
+                            <span className="qualification__subtitle">SKC</span>
+                            <div className="qualification__calendar">
+                                <i className="uil uil-calendar-alt"></i>
                                 2021 - Present
                             </div>
                         </div>
                     </div>
-                    <div class="qualification__data">
+                    <div className="qualification__data">
                         <div className='qualification__left'>
-                            <h3 class="qualification__title">DWP</h3>
-                            <span class="qualification__subtitle">SK-Hynix</span>
-                            <div class="qualification__calendar">
-                                <i class="uil uil-calendar-alt"></i>
+                            <h3 className="qualification__title">DWP</h3>
+                            <span className="qualification__subtitle">SK-Hynix</span>
+                            <div className="qualification__calendar">
+                                <i className="uil uil-calendar-alt"></i>
                                 2021
                             </div>
                         </div>
                         <div>
-                            <span class="qualification__rounder"></span>
-                            <span class="qualification__line"></span>
+                            <span className="qualification__rounder"></span>
+                            <span className="qualification__line"></span>
                         </div>
                     </div>
                 </div>
-                <div class={`qualification__content ${toggleState === 2 ? "qualification__content-active" : ""}`}>
-                    <div class="qualification__data">
+                <div className={`qualification__content ${toggleState === 2 ? "qualification__content-active" : ""}`}>
+                    <div className="qualification__data">
                         <div className='qualification__left'>
                             <h3 className="qualification__title">Java</h3>
                             <span className="qualification__subtitle">Green Academy</span>
@@ -88,36 +85,36 @@ const Qualification = () => {
                         </div>
                         <div>
                             <span className="qualification__rounder"></span>
-                            <span class="qualification__line"></span>
+                            <span className="qualification__line"></span>
                         </div>
                     </div>
-                    <div class="qualification__data">
+                    <div className="qualification__data">
                         <div></div>
                         <div>
-                            <span class="qualification__rounder"></span>
-                            <span class="qualification__line"></span>
+                            <span className="qualification__rounder"></span>
+                            <span className="qualification__line"></span>
                         </div>
                         <div>
-                            <h3 class="qualification__title">Early Childhood Education</h3>
-                            <span class="qualification__subtitle">Sprott-shaw College in Canada</span>
-                            <div class="qualification__calendar">
-                                <i class="uil uil-calendar-alt"></i>
+                            <h3 className="qualification__title">Early Childhood Education</h3>
+                            <span className="qualification__subtitle">Sprott-shaw College in Canada</span>
+                            <div className="qualification__calendar">
+                                <i className="uil uil-calendar-alt"></i>
                                 2016 - 2017
                             </div>
                         </div>
                     </div>
-                    <div class="qualification__data">
+                    <div className="qualification__data">
                         <div className='qualification__left'>
-                            <h3 class="qualification__title">Silver Industry &<br />Social Welfare</h3>
-                            <span class="qualification__subtitle">University of Gangnam</span>
-                            <div class="qualification__calendar">
-                                <i class="uil uil-calendar-alt"></i>
+                            <h3 className="qualification__title">Silver Industry &<br />Social Welfare</h3>
+                            <span className="qualification__subtitle">University of Gangnam</span>
+                            <div className="qualification__calendar">
+                                <i className="uil uil-calendar-alt"></i>
                                 2008 - 2012
                             </div>
                         </div>
                         <div>
-                            <span class="qualification__rounder"></span>
-                            <span class="qualification__line"></span>
+                            <span className="qualification__rounder"></span>
+                            <span className="qualification__line"></span>
                         </div>
                     </div>
                 </div>
