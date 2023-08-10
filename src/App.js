@@ -1,32 +1,21 @@
 import './App.css';
-import About from './components/about';
 import Header from './components/header';
-import Home from './components/home';
-import Skills from './components/skills';
-import Services from './components/services/index';
-import Qualification from './components/qualification';
-import Testimonial from './components/testimonials';
-import Contact from './components/contact';
 import Footer from './components/footer';
 import ScrollUp from './components/scrollup';
-import Work from './components/work';
+import Main from './components/main';
+import { Routes, useNavigate, withRouter } from 'react-router-dom';
+import RestrictRoute from './restrict';
 
 function App() {
+  // const NonBlockApp = withRouter(Routes);
+  const navigate = useNavigate();
   return (
     <>
       <Header />
-
       <main className="main">
-        <Home />
-        <About />
-        <Skills />
-        <Services />
-        <Qualification />
-        <Work />
-        {/* <Testimonial /> */}
-        <Contact />
+        {/* <Main /> */}
+        <RestrictRoute component={navigate} />
       </main>
-
       <Footer />
       <ScrollUp />
     </>

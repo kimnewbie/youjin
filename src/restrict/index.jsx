@@ -1,16 +1,12 @@
 import React from "react";
-import { Route, Redirect, Switch } from "react-router-dom";
-import { withRouter } from "react-router-dom";
-import { setCookie } from "utils/cookie";
+import { Route, Navigate, Routes } from "react-router-dom";
 
-const RestrictedRoute = ({ component: Component, location }) => {
+const RestrictRoute = ({ component: Component, location }) => {
   return (
-    <Switch>
-      <Route exact path="/">
-        <Redirect to="/home" />
-      </Route>
-    </Switch>
+    <Routes>
+      <Route exact path="/" element={<Navigate to="/home" />} />
+    </Routes>
   );
 };
 
-export default RestrictedRoute;
+export default RestrictRoute;
