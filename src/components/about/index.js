@@ -1,8 +1,8 @@
 import React from "react";
 import "./about.css";
 import AboutImg from "../../assets/about.jpg";
-import CV from "../../assets/Youjin-Cv.pdf";
 import Info from "./Info";
+// import CV from "../../assets/Youjin-Cv.pdf";
 
 const About = () => {
   return (

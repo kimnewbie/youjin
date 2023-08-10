@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   // Toggle Menu
@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <header className="header">
       <nav className="nav container">
-        <a href="index.html" className="nav__logo">
+        <a href="/" className="nav__logo">
           Youjin
         </a>
 
@@ -34,11 +34,10 @@ const Header = () => {
           <ul className="nav__list grid">
             <li className="nav__item">
               <a
-                href="#home"
-                onClick={() => onClickTabs("#home")}
-                className={`nav__link ${
-                  activeNav === "#home" ? "active-link" : ""
-                }`}
+                href="/#home"
+                onClick={() => onClickTabs("/#home")}
+                className={`nav__link ${activeNav === "/#home" ? "active-link" : ""
+                  }`}
               >
                 <i className="uil uil-estate nav__icon"></i>
                 Home
@@ -46,11 +45,10 @@ const Header = () => {
             </li>
             <li className="nav__item">
               <a
-                href="#about"
-                onClick={() => onClickTabs("#about")}
-                className={`nav__link ${
-                  activeNav === "#about" ? "active-link" : ""
-                }`}
+                href="/#about"
+                onClick={() => onClickTabs("/#about")}
+                className={`nav__link ${activeNav === "/#about" ? "active-link" : ""
+                  }`}
               >
                 <i className="uil uil-user nav__icon"></i>
                 About
@@ -58,11 +56,10 @@ const Header = () => {
             </li>
             <li className="nav__item">
               <a
-                href="#skills"
-                onClick={() => onClickTabs("#skills")}
-                className={`nav__link ${
-                  activeNav === "#skills" ? "active-link" : ""
-                }`}
+                href="/#skills"
+                onClick={() => onClickTabs("/#skills")}
+                className={`nav__link ${activeNav === "/#skills" ? "active-link" : ""
+                  }`}
               >
                 <i className="uil uil-file-alt nav__icon"></i>
                 Skills
@@ -70,11 +67,10 @@ const Header = () => {
             </li>
             <li className="nav__item">
               <a
-                href="#services"
-                onClick={() => onClickTabs("#services")}
-                className={`nav__link ${
-                  activeNav === "#services" ? "active-link" : ""
-                }`}
+                href="/#services"
+                onClick={() => onClickTabs("/#services")}
+                className={`nav__link ${activeNav === "/#services" ? "active-link" : ""
+                  }`}
               >
                 <i className="uil uil-briefcase-alt nav__icon"></i>
                 Services
@@ -82,11 +78,10 @@ const Header = () => {
             </li>
             <li className="nav__item">
               <a
-                href="#qualification"
-                onClick={() => onClickTabs("#qualification")}
-                className={`nav__link ${
-                  activeNav === "#qualification" ? "active-link" : ""
-                }`}
+                href="/#qualification"
+                onClick={() => onClickTabs("/#qualification")}
+                className={`nav__link ${activeNav === "/#qualification" ? "active-link" : ""
+                  }`}
               >
                 <i className="uil uil-briefcase-alt nav__icon"></i>
                 Qualification
@@ -94,11 +89,10 @@ const Header = () => {
             </li>
             <li className="nav__item">
               <a
-                href="#portfolio"
-                onClick={() => onClickTabs("#portfolio")}
-                className={`nav__link ${
-                  activeNav === "#portfolio" ? "active-link" : ""
-                }`}
+                href="/#portfolio"
+                onClick={() => onClickTabs("/#portfolio")}
+                className={`nav__link ${activeNav === "/#portfolio" ? "active-link" : ""
+                  }`}
               >
                 <i className="uil uil-scenery nav__icon"></i>
                 Portfolio
@@ -106,27 +100,20 @@ const Header = () => {
             </li>
             <li className="nav__item">
               <a
-                href="#contact"
-                onClick={() => onClickTabs("#contact")}
-                className={`nav__link ${
-                  activeNav === "#contact" ? "active-link" : ""
-                }`}
+                href="/#contact"
+                onClick={() => onClickTabs("/#contact")}
+                className={`nav__link ${activeNav === "/#contact" ? "active-link" : ""
+                  }`}
               >
                 <i className="uil uil-message nav__icon"></i>
                 Contact
               </a>
             </li>
             <li className="nav__item">
-              <a
-                href="/signup"
-                // onClick={() => onClickTabs("#signup")}
-                // className={`nav__link ${
-                //   activeNav === "#signup" ? "active-link" : ""
-                // }`}
-              >
-                <i className="uil uil-message nav__icon"></i>
-                Sign Up
-              </a>
+              <Link to="/signup">Sign Up</Link>
+            </li>
+            <li className="nav__item">
+              <Link to="/signin">Sign In</Link>
             </li>
           </ul>
           <i className="uil uil-times nav__close" onClick={onClickToggle} />

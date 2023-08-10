@@ -3,18 +3,20 @@ import Header from './components/header';
 import Footer from './components/footer';
 import ScrollUp from './components/scrollup';
 import Main from './components/main';
-import { Routes, useNavigate, withRouter } from 'react-router-dom';
-import RestrictRoute from './restrict';
+import { Route, Routes } from 'react-router-dom';
+import SignUp from './components/signup';
+import SignIn from './components/signin';
 
 function App() {
-  // const NonBlockApp = withRouter(Routes);
-  const navigate = useNavigate();
   return (
     <>
       <Header />
       <main className="main">
-        {/* <Main /> */}
-        <RestrictRoute component={navigate} />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
       </main>
       <Footer />
       <ScrollUp />
