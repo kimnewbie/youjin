@@ -96,6 +96,13 @@
     background-color: var(--title-color-dark);
 }
 
+.signin__callout {
+    padding: 16px 16px;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 992px) {
