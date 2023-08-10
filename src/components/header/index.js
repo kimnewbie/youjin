@@ -110,10 +110,14 @@ const Header = () => {
               </a>
             </li>
             <li className="nav__item">
-              <Link to="/signup">Sign Up</Link>
+              <Link to="/signup"
+                onClick={() => onClickTabs("/signup")}
+                className={`nav__link ${activeNav === "/signup" ? "active-link" : ""}`}>Sign Up</Link>
             </li>
             <li className="nav__item">
-              <Link to="/signin">Sign In</Link>
+              <Link to="/signin"
+                onClick={() => onClickTabs("/signin")}
+                className={`nav__link ${activeNav === "/signin" ? "active-link" : ""}`}>Sign In</Link>
             </li>
           </ul>
           <i className="uil uil-times nav__close" onClick={onClickToggle} />

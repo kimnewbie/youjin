@@ -12,11 +12,11 @@ const SignIn = () => {
 
     return (
         <section className='signin section'>
-            <h1 className="section__title">Youjin</h1>
+            <Link to='/'><h1 className="section__title">Youjin</h1></Link>
             <div className="signin__container container grid">
                 <div className="signin__content">
                     <div className='signin__greeting'>
-                        <h3 className="signin__title">Sign in to Youjin</h3>
+                        <h3 className="signin__title">Sign in Youjin.</h3>
                         <p>Welcome!</p>
                     </div>
                     <div className='signin__line'></div>

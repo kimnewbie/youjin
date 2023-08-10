@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import './signup.css';
+import { Link } from 'react-router-dom';
 
 const SignUp = () => {
     const form = useRef();
@@ -11,7 +12,7 @@ const SignUp = () => {
 
     return (
         <section className='signup section'>
-            <h1 className="section__title">Youjin</h1>
+            <Link to='/'><h1 className="section__title">Youjin</h1></Link>
             <div className="signup__container container grid">
                 <div className="signup__content">
                     <div className='signup__greeting'>
