@@ -5,8 +5,18 @@ import SignUp from './components/signup';
 import SignIn from './components/signin';
 import MainComponents from './components/mainComponents';
 import MyInfo from './components/myInfo/index';
+import { useEffect } from 'react';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from './firebase/firebaseinit';
 
 function App() {
+  useEffect(() => {
+    const unsub = onAuthStateChanged(auth, (userDoc) => {
+      console.log(userDoc);
+    })
+    return () => unsub();
+  }, []);
+
   return (
     <BrowserRouter>
       <main className="main">

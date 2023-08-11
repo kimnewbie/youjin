@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import './signup.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { addDoc, collection, deleteDoc, doc, getDoc, getDocs, query, updateDoc, where } from 'firebase/firestore';
-import { db, firebaseInstance } from '../../firebase/firebaseinit';
+import { auth, db, firebaseInstance } from '../../firebase/firebaseinit';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 const initialUser = {
     name: '',
@@ -10,6 +11,7 @@ const initialUser = {
     password: '',
     rePassword: '',
 }
+
 const SignUp = () => {
     const form = useRef();
     const navigate = useNavigate();
@@ -60,26 +62,56 @@ const SignUp = () => {
         await deleteDoc(userDoc)
     }
 
-    const onClickSignUp = async (e) => {
-        e.preventDefault();
-        if (!user.name || !user.email || !user.password || !user.rePassword) {
-            return alert('빈칸이 들어갈 수 없습니다')
-        }
-        // 아이디 중복 검사
+    // // 기존꺼 잠시 주석
+    // const onClickSignUp = async (e) => {
+    //     e.preventDefault();
+    //     if (!user.name || !user.email || !user.password || !user.rePassword) {
+    //         return alert('빈칸이 들어갈 수 없습니다')
+    //     }
+    //     // 아이디 중복 검사
 
-        // 비밀 번호 검사 
+    //     // 비밀 번호 검사 
 
-        // 저장
+    //     // 저장
+    //     try {
+    //         await addDoc(usersCollectionRef, { name: user.name, email: user.email, password: user.password });
+    //     } catch (e) {
+    //         console.log(e)
+    //         return alert('Ooops.. something wrong, try one more time');
+    //     } finally {
+    //         alert(`Congratulations, ${user.name}! Your account has been successfully created.`);
+    //         return navigate('/signin');
+    //     }
+    // };
+
+    const onClickSignUp = async () => {
         try {
-            await addDoc(usersCollectionRef, { name: user.name, email: user.email, password: user.password });
+            await createUserWithEmailAndPassword(auth, user.email, user.password)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    console.log(user)
+                })
         } catch (e) {
-            console.log(e)
-            return alert('Ooops.. something wrong, try one more time');
-        } finally {
-            alert(`Congratulations, ${user.name}! Your account has been successfully created.`);
-            return navigate('/signin');
+            // const msg = e.code.split('auth/')[1].split('-').join(' ');
+            // console.log(msg) 
+            switch (e.code) {
+                case "auth/user-not-found" || "auth/wrong-password":
+                    return alert("이메일 혹은 비밀번호가 일치하지 않습니다.");
+                case "auth/email-already-in-use":
+                    return alert("이미 사용 중인 이메일입니다.");
+                case "auth/weak-password":
+                    return alert("비밀번호는 6글자 이상이어야 합니다.");
+                case "auth/network-request-failed":
+                    return alert("네트워크 연결에 실패 하였습니다.");
+                case "auth/invalid-email":
+                    return alert("잘못된 이메일 형식입니다.");
+                case "auth/internal-error":
+                    return alert("잘못된 요청입니다.");
+                default:
+                    return alert("로그인에 실패 하였습니다.");
+            }
         }
-    };
+    }
 
     return (
         <section className='signup section'>
