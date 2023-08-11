@@ -100,6 +100,14 @@
     background-color: var(--title-color-dark);
 }
 
+/* test */
+.duple__btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 2;
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 992px) {

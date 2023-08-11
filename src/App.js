@@ -4,6 +4,7 @@ import Main from './components/main';
 import SignUp from './components/signup';
 import SignIn from './components/signin';
 import MainComponents from './components/mainComponents';
+import MyInfo from './components/myInfo/index';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           </Route>
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/myInfo" element={<MyInfo />} />
         </Routes>
       </main>
     </BrowserRouter>

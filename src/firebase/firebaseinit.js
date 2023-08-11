@@ -1,11 +1,10 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics, logEvent } from "firebase/analytics";
+import { getAnalytics } from "firebase/analytics";
 import { firebaseConfig } from "./.credentials";
-import { getFireStore } from '@firebase/firestore';
+import { getFirestore } from "firebase/firestore";
 
+// Firebase를 초기화 및 Firebase 앱 객체 생성
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-// logEvent(analytics, 'notification_received'); // test
 
-// Cloud Firestore
-export const db = getFireStore(app);
+export const db = getFirestore(app); 

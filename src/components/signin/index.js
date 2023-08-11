@@ -12,7 +12,7 @@ const SignIn = () => {
 
     return (
         <section className='signin section'>
-            <Link to='/'><h1 className="section__title">Youjin</h1></Link>
+            <h1 className="section__title"><Link to='/'>Youjin</Link></h1>
             <div className="signin__container container grid">
                 <div className="signin__content">
                     <div className='signin__greeting'>
